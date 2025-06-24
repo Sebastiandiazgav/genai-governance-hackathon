@@ -1,6 +1,28 @@
-# config.py (añadir al final)
+# config.py - VERSIÓN COMPLETA Y CORREGIDA
 
-# --- Reglas para el Agente "Policy Enforcer" ---
+# --- Reglas para el Agente "Prompt Guard" (Día 3) ---
+# Palabras clave que revisarán los prompts de entrada.
+
+PROHIBITED_KEYWORDS_EN = [
+    "tax evasion", 
+    "insider trading", 
+    "money laundering", 
+    "illegal",
+    "how to make a bomb",
+    "buy drugs"
+]
+
+PROHIBITED_KEYWORDS_ES = [
+    "evasión de impuestos", 
+    "información privilegiada", 
+    "lavado de dinero", 
+    "ilegal",
+    "cómo hacer una bomba",
+    "comprar drogas"
+]
+
+
+# --- Reglas para el Agente "Policy Enforcer" (Día 4) ---
 
 # Palabras clave que indican un tema sensible
 SENSITIVE_KEYWORDS_EN = {
