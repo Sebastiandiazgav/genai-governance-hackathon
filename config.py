@@ -47,3 +47,15 @@ POLICY_RULES = {
     "transaction history": ["Gestor Financiero"],
     "personal information": ["Usuario Registrado", "Gestor Financiero"]
 }
+
+# config.py (añadir al final)
+
+# --- Reglas para el Agente "Auditor de Salidas" ---
+FORBIDDEN_OUTPUT_PHRASES = [
+    "i guarantee",
+    "i promise",
+    "this is financial advice",
+    "te garantizo",
+    "te prometo",
+    "esto es un consejo financiero"
+]
