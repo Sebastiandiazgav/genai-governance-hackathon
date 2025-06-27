@@ -23,6 +23,8 @@ def log_interaction(log_data: dict):
         # Insertamos el item en la tabla
         table.put_item(Item=log_data)
         print(f"Registro exitoso en DynamoDB. ID: {log_data['log_id']}")
-        
+        return log_data['log_id']
+
     except Exception as e:
         print(f"ERROR: No se pudo registrar en DynamoDB: {e}")
+        return None
