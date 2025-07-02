@@ -59,4 +59,4 @@ To test the full functionality of the system, please follow these scenarios:
 
 ## Deployed Project URL
 
-**URL:** *[Link to be pasted here once the application is deployed on Day 10]*
+**URL:** *[Link to be pasted here once the application is deployed on Day 10]* .
