@@ -53,8 +53,7 @@ selected_lang_label = st.sidebar.radio(
 lang_code = lang_options[selected_lang_label]
 
 # --- Interfaz Principal con Textos Dinámicos ---
-# st.title(UI_TEXTS['main_title'][lang_code])
-st.title("PRUEBA DE DESPLIEGUE v3 - SI VES ESTO, EL CÓDIGO ESTÁ ACTUALIZADO")
+st.title(UI_TEXTS['main_title'][lang_code])
 st.header(UI_TEXTS['main_header'][lang_code])
 st.markdown(UI_TEXTS['main_description'][lang_code])
 st.divider()
