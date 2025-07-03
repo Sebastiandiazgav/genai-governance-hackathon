@@ -15,12 +15,8 @@ def log_interaction(log_data: dict):
         dynamodb = boto3.resource('dynamodb')
         table_name = 'governance_audit_logs'
         table = dynamodb.Table(table_name)
-        
-        # Añadimos un ID único y una marca de tiempo al registro
         log_data['log_id'] = str(uuid.uuid4())
         log_data['timestamp'] = datetime.utcnow().isoformat()
-        
-        # Insertamos el item en la tabla
         table.put_item(Item=log_data)
         print(f"Registro exitoso en DynamoDB. ID: {log_data['log_id']}")
         return log_data['log_id']

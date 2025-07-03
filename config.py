@@ -1,7 +1,3 @@
-# config.py - VERSIÓN COMPLETA Y CORREGIDA
-
-# --- Reglas para el Agente "Prompt Guard" (Día 3) ---
-# Palabras clave que revisarán los prompts de entrada.
 
 PROHIBITED_KEYWORDS_EN = [
     "tax evasion", 
@@ -21,10 +17,6 @@ PROHIBITED_KEYWORDS_ES = [
     "comprar drogas"
 ]
 
-
-# --- Reglas para el Agente "Policy Enforcer" (Día 4) ---
-
-# Palabras clave que indican un tema sensible
 SENSITIVE_KEYWORDS_EN = {
     "portfolio",
     "account balance",
@@ -39,8 +31,6 @@ SENSITIVE_KEYWORDS_ES = {
     "información personal"
 }
 
-# Definición de políticas: qué rol se necesita para cada tema sensible.
-# Usamos las palabras en inglés como clave estándar para las reglas.
 POLICY_RULES = {
     "portfolio": ["Usuario Registrado", "Gestor Financiero"],
     "account balance": ["Usuario Registrado", "Gestor Financiero"],
@@ -48,9 +38,6 @@ POLICY_RULES = {
     "personal information": ["Usuario Registrado", "Gestor Financiero"]
 }
 
-# config.py (añadir al final)
-
-# --- Reglas para el Agente "Auditor de Salidas" ---
 FORBIDDEN_OUTPUT_PHRASES = [
     "i guarantee",
     "i promise",

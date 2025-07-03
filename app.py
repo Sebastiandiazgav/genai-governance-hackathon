@@ -10,7 +10,7 @@ from agents.audit_logger import log_interaction
 from utils.bedrock_client import invoke_model
 from utils.dynamodb_helpers import update_feedback
 
-# --- Diccionario de Textos para UI Bilingüe ---
+# Diccionario de Textos para UI Bilingüe 
 UI_TEXTS = {
     'lang_selector_label': {'es': "Idioma / Language", 'en': "Language / Idioma"},
     'main_title': {'es': "Sistema de Gobernanza Multiagente para IA 🤖", 'en': "Multi-Agent AI Governance System 🤖"},
@@ -41,10 +41,8 @@ UI_TEXTS = {
     'button_not_useful': {'es': "👎 No útil", 'en': "👎 Not Useful"}
 }
 
-# --- Configuración de la Página ---
 st.set_page_config(page_title="AI Governance System", layout="wide", initial_sidebar_state="expanded")
 
-# --- Selector de Idioma en Sidebar ---
 lang_options = {'Español': 'es', 'English': 'en'}
 selected_lang_label = st.sidebar.radio(
     label=UI_TEXTS['lang_selector_label']['es'],
@@ -52,13 +50,13 @@ selected_lang_label = st.sidebar.radio(
 )
 lang_code = lang_options[selected_lang_label]
 
-# --- Interfaz Principal con Textos Dinámicos ---
+# Interfaz
 st.title(UI_TEXTS['main_title'][lang_code])
 st.header(UI_TEXTS['main_header'][lang_code])
 st.markdown(UI_TEXTS['main_description'][lang_code])
 st.divider()
 
-# --- Simulación de Roles de Usuario (CON LA CORRECCIÓN) ---
+# Roles
 st.sidebar.title(UI_TEXTS['sidebar_title'][lang_code])
 role_options_in_selected_lang = UI_TEXTS['roles'][lang_code]
 selected_role_label = st.sidebar.selectbox(
@@ -69,7 +67,7 @@ selected_index = role_options_in_selected_lang.index(selected_role_label)
 user_role = UI_TEXTS['roles']['es'][selected_index]
 st.sidebar.info(f"{UI_TEXTS['role_info'][lang_code]} **{selected_role_label}**")
 
-# --- Lógica de Feedback ---
+# Feedback
 if 'log_id' not in st.session_state:
     st.session_state.log_id = None
 
@@ -80,7 +78,7 @@ def handle_feedback(feedback_type):
         else:
             st.toast(UI_TEXTS['feedback_error'][lang_code], icon="❌")
 
-# --- Bloque Principal de Interacción ---
+# Interacción
 user_prompt = st.text_input(UI_TEXTS['text_input_label'][lang_code], key="prompt_input")
 
 if user_prompt:

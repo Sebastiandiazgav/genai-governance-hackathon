@@ -1,4 +1,3 @@
-# agents/output_auditor.py
 import config
 
 def audit_output(llm_response: str) -> bool:

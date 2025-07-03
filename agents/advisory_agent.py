@@ -14,7 +14,6 @@ def get_rejection_reason(original_prompt: str, rejection_reason: str, language: 
     Returns:
         str: Una explicación amigable generada por el LLM.
     """
-    # Creamos un "meta-prompt" para que el LLM actúe como nuestro agente asesor
     instructional_prompt = f"""
     Act as a helpful and polite governance assistant. A user's request was blocked. 
     Your task is to explain why, in a clear, educational, and non-judgmental way.
@@ -26,5 +25,4 @@ def get_rejection_reason(original_prompt: str, rejection_reason: str, language: 
     Please generate a brief, helpful explanation for the user in the specified language.
     """
     
-    # Usamos nuestro cliente de Bedrock para obtener la explicación
     return invoke_model(prompt=instructional_prompt)
