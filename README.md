@@ -36,7 +36,7 @@ We have built a complete system with 5 distinct governance agents, each with a s
 
 ## Architecture Diagram
 
-*[Architecture diagram to be inserted here on Day 9]*
+![Architecture Diagram](images/diagram.png)
 
 ## Testing Instructions
 
@@ -59,4 +59,10 @@ To test the full functionality of the system, please follow these scenarios:
 
 ## Deployed Project URL
 
-**URL:** *[Link to be pasted here once the application is deployed on Day 10]* .
+## Deployed Project URL
+
+**URL:** [https://genai-governance-hackathon-ewbioitpyyniz3ghfd9rge.streamlit.app/](https://genai-governance-hackathon-ewbioitpyyniz3ghfd9rge.streamlit.app/)
+
+**Note:** The application is hosted on Streamlit's free Community Cloud tier and may go to sleep after a period of inactivity. If you see the screen below, please click the **"Yes, get this app back up!"** button to wake it up. The initial boot-up may take about a minute.
+
+![Streamlit Sleep Screen](images/streamlit-sleep.png)
