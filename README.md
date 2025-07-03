@@ -57,7 +57,6 @@ To test the full functionality of the system, please follow these scenarios:
     * **Expected Result:** The request will be blocked immediately, and the `Advisory Agent` will provide an explanation regarding inappropriate content.
 5.  **Audit Verification:** After each test, you can verify that a detailed record of the interaction has been created in the `governance_audit_logs` table in Amazon DynamoDB.
 
-## Deployed Project URL
 
 ## Deployed Project URL
 
